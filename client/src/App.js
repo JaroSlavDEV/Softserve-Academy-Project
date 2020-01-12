@@ -20,8 +20,18 @@ function App() {
   const renderDefibrillator = defibrillator => {
     return (
       <li key={defibrillator._id} className="list__item defibrillator">
-        <h3 className="defibrillator__name">{defibrillator.name}</h3>
-        <p className="defibrillator__description">{defibrillator.description}</p>
+        <h3 className="defibrillator__name">{defibrillator.title}</h3>
+        <p className="defibrillator__description">{defibrillator.address}</p>
+        <p className="defibrillator__description">{defibrillator.location.coordinates[1]}, {defibrillator.location.coordinates[0]}</p>
+        <p className="defibrillator__description">{defibrillator.actual_date}</p>
+        <p className="defibrillator__description">{defibrillator.floor}</p>
+        <p className="defibrillator__description">{defibrillator.storage_place}</p>
+        <p className="defibrillator__description">{defibrillator.accessibility}</p>
+        <p className="defibrillator__description">{defibrillator.language}</p>
+        <p className="defibrillator__description">{defibrillator.informational_plates}</p>
+        <p className="defibrillator__description">{defibrillator.phone.join(', ')}</p>
+        <p className="defibrillator__description">{defibrillator.additional_information}</p>
+        <hr/>
       </li>
     );
   };
